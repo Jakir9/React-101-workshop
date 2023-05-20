@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <!-- import babel -->
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- 👉 Give the script tag **above** the `const rootElement = ...` a type
+    attribute of `"text/babel"` so that babel will transpile the contents of our
+    tag to raw JavaScript. ✅
+    👉 Convert the `Title` component to JSX -->
+
+    <!-- add the required type attribute on the script below -->
+
+    <script type="text/babel">
+      const rootElement = document.querySelector("#root");
+      const root = ReactDOM.createRoot(rootElement);
+
+      function Title() {
+        // convert this to jsx
+
+        return <h1>JSX Rules!</h1>;
+        //return React.createElement("h1", null, "JSX Rules!");
+      }
+
+      function HelloWorld() {
+        return <h1 className="container">Hello World</h1>;
+      }
+
+      function Button() {
+        return <button className="Button"> Big Button</button>;
+      }
+
+      root.render(HelloWorld());
+      root.render(Button());
+      root.render(Title());
+    </script>
+  </body>
+</html>
